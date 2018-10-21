@@ -16,8 +16,16 @@ namespace Gamepad
         /// <summary>
         ///     Creates instance of gamepad controller.
         /// </summary>
+        public GamepadController() : this(true)
+        {
+
+        }
+
+        /// <summary>
+        ///     Creates instance of gamepad controller.
+        /// </summary>
         /// <param name="isEnabled">Indicates whether gamepad controller is immediately enabled.</param>
-        public GamepadController(bool isEnabled = true)
+        public GamepadController(bool isEnabled)
         {
             IsEnabled = isEnabled;
             foreach (var gamepad in Gamepads)
