@@ -74,7 +74,6 @@ namespace Gamepad
             {ButtonNames.RightTumb, new ThumbStick(ButtonNames.RightTumb) {DeadZone = Deadzones.RightTHumb}}
         };
 
-
         /// <summary>
         ///     Gets all pressed gamepad buttons.
         /// </summary>
