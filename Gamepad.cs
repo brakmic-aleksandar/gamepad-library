@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Gamepad.Xinput;
 
 namespace Gamepad
@@ -72,6 +73,12 @@ namespace Gamepad
             {ButtonNames.LeftThumb, new ThumbStick(ButtonNames.LeftThumb) {DeadZone = Deadzones.LeftThumb}},
             {ButtonNames.RightTumb, new ThumbStick(ButtonNames.RightTumb) {DeadZone = Deadzones.RightTHumb}}
         };
+
+
+        /// <summary>
+        ///     Gets all pressed gamepad buttons.
+        /// </summary>
+        public List<Button> PressedButtons => Buttons.Where(x => x.Value.IsPressed).Select(x => x.Value).ToList();
 
         /// <summary>
         ///     Gets 'X' gamepad button.
