@@ -71,13 +71,18 @@ namespace Gamepad
             {ButtonNames.LeftTrigger, new Trigger(ButtonNames.LeftTrigger) {DeadZone = Deadzones.Trigger}},
             {ButtonNames.RightTrigger, new Trigger(ButtonNames.RightTrigger) {DeadZone = Deadzones.Trigger}},
             {ButtonNames.LeftThumb, new ThumbStick(ButtonNames.LeftThumb) {DeadZone = Deadzones.LeftThumb}},
-            {ButtonNames.RightTumb, new ThumbStick(ButtonNames.RightTumb) {DeadZone = Deadzones.RightTHumb}}
+            {ButtonNames.RightThumb, new ThumbStick(ButtonNames.RightThumb) {DeadZone = Deadzones.RightTHumb}}
         };
 
         /// <summary>
         ///     Gets all pressed gamepad buttons.
         /// </summary>
         public List<Button> PressedButtons => Buttons.Where(x => x.Value.IsPressed).Select(x => x.Value).ToList();
+
+        /// <summary>
+        ///     Gets all pressed gamepad button names.
+        /// </summary>
+        public List<ButtonNames> PressedButtonNames => Buttons.Where(x => x.Value.IsPressed).Select(x => x.Value.Name).ToList();
 
         /// <summary>
         ///     Gets 'X' gamepad button.
@@ -157,7 +162,7 @@ namespace Gamepad
         /// <summary>
         ///     Gets right gamepad thumbstick.
         /// </summary>
-        public ThumbStick RightThumbStick => (ThumbStick) Buttons[ButtonNames.RightTumb];
+        public ThumbStick RightThumbStick => (ThumbStick) Buttons[ButtonNames.RightThumb];
 
         /// <summary>
         ///     Gets battery information.

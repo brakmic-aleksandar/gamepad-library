@@ -90,7 +90,7 @@ namespace Gamepad
                     UpdatePosition(state.GamepadState.LeftThumbStickXPosition,
                         state.GamepadState.LeftThumbStickYPosition);
                     break;
-                case ButtonNames.RightTumb:
+                case ButtonNames.RightThumb:
                     UpdatePosition(state.GamepadState.RightThumbStickXPosition,
                         state.GamepadState.RightThumbStickYPosition);
                     break;

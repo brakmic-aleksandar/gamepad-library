@@ -15,7 +15,7 @@ namespace Gamepad
         Start = 0x0010,
         Back = 0x0020,
         LeftThumb = 0x0040,
-        RightTumb = 0x0080,
+        RightThumb = 0x0080,
         LeftShoulder = 0x0100,
         RightShoulder = 0x0200,
         A = 0x1000,
